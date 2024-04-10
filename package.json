@@ -31,7 +31,9 @@
     "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src ",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "lint:prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts,less,md,json}\" --end-of-line auto",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "model:train": "cd ai-model && poetry run python ./src/__init__.py && cd ..",
+    "model:install-deps": "cd ai-model && poetry install --no-root && cd .."
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",

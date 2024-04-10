@@ -27,6 +27,14 @@ lerna-debug.log*
 .settings/
 *.sublime-workspace
 
+# py venv
+.ai-model/.venv/*
+
+# py
+.ai-model/*.h5
+.ai-model/*.keras
+.ai-model/src/__pycache__/*
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json

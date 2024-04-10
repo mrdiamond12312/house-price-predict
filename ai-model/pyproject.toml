@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ai-model"
+version = "0.1.0"
+description = "AI model for predicting house price"
+authors = ["Nice <hoangkimc93@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python="^3.9"
+seaborn = "^0.13.2"
+matplotlib = "^3.8.4"
+numpy = "^1.26.4"
+pandas = "^2.2.1"
+scikit-learn = "^1.4.2"
+tensorflow = "^2.16.1"
+keras = "^3.2.0"
+pathlib = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
