@@ -42,13 +42,15 @@ export class PriceService {
 
     const vector = [];
     tags.map((tag) =>
-      vector.push(isNaN(Number(inputs[tag])))
-        ? tag.includes('yr_')
-          ? 1900
-          : 0
-        : Number(inputs[tag]),
+      vector.push(
+        isNaN(Number(inputs[tag]))
+          ? tag.includes('yr_')
+            ? 1900
+            : 0
+          : Number(inputs[tag]),
+      ),
     );
-    return tf.tensor(Object.values(vector), [1, 19]);
+    return tf.tensor(vector, [1, 19]);
   }
 
   async predict(inputs: PredictInputDto) {
