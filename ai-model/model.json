@@ -1,0 +1,223 @@
+{
+  "format": "layers-model",
+  "generatedBy": "keras v2.15.0",
+  "convertedBy": "TensorFlow.js Converter v4.17.0",
+  "modelTopology": {
+    "keras_version": "2.15.0",
+    "backend": "tensorflow",
+    "model_config": {
+      "class_name": "Sequential",
+      "config": {
+        "name": "sequential",
+        "layers": [
+          {
+            "class_name": "InputLayer",
+            "config": {
+              "batch_input_shape": [null, 19],
+              "dtype": "float32",
+              "sparse": false,
+              "ragged": false,
+              "name": "InputLayer_input"
+            }
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "InputLayer",
+              "trainable": true,
+              "dtype": "float32",
+              "batch_input_shape": [null, 19],
+              "units": 19,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "module": "keras.initializers",
+                "class_name": "GlorotUniform",
+                "config": { "seed": null },
+                "registered_name": null
+              },
+              "bias_initializer": {
+                "module": "keras.initializers",
+                "class_name": "Zeros",
+                "config": {},
+                "registered_name": null
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            }
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "HiddenLayer1",
+              "trainable": true,
+              "dtype": "float32",
+              "units": 38,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "module": "keras.initializers",
+                "class_name": "GlorotUniform",
+                "config": { "seed": null },
+                "registered_name": null
+              },
+              "bias_initializer": {
+                "module": "keras.initializers",
+                "class_name": "Zeros",
+                "config": {},
+                "registered_name": null
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            }
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "HiddenLayer2",
+              "trainable": true,
+              "dtype": "float32",
+              "units": 32,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "module": "keras.initializers",
+                "class_name": "GlorotUniform",
+                "config": { "seed": null },
+                "registered_name": null
+              },
+              "bias_initializer": {
+                "module": "keras.initializers",
+                "class_name": "Zeros",
+                "config": {},
+                "registered_name": null
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            }
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "HiddenLayer3",
+              "trainable": true,
+              "dtype": "float32",
+              "units": 16,
+              "activation": "relu",
+              "use_bias": true,
+              "kernel_initializer": {
+                "module": "keras.initializers",
+                "class_name": "GlorotUniform",
+                "config": { "seed": null },
+                "registered_name": null
+              },
+              "bias_initializer": {
+                "module": "keras.initializers",
+                "class_name": "Zeros",
+                "config": {},
+                "registered_name": null
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            }
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "OutputLayer",
+              "trainable": true,
+              "dtype": "float32",
+              "units": 1,
+              "activation": "linear",
+              "use_bias": true,
+              "kernel_initializer": {
+                "module": "keras.initializers",
+                "class_name": "GlorotUniform",
+                "config": { "seed": null },
+                "registered_name": null
+              },
+              "bias_initializer": {
+                "module": "keras.initializers",
+                "class_name": "Zeros",
+                "config": {},
+                "registered_name": null
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            }
+          }
+        ]
+      }
+    },
+    "training_config": {
+      "loss": "mse",
+      "metrics": null,
+      "weighted_metrics": null,
+      "loss_weights": null,
+      "optimizer_config": {
+        "class_name": "Custom>Adam",
+        "config": {
+          "name": "Adam",
+          "weight_decay": null,
+          "clipnorm": null,
+          "global_clipnorm": null,
+          "clipvalue": null,
+          "use_ema": false,
+          "ema_momentum": 0.99,
+          "ema_overwrite_frequency": null,
+          "jit_compile": false,
+          "is_legacy_optimizer": false,
+          "learning_rate": 0.0010000000474974513,
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "epsilon": 1e-7,
+          "amsgrad": false
+        }
+      }
+    }
+  },
+  "weightsManifest": [
+    {
+      "paths": ["group1-shard1of1.bin"],
+      "weights": [
+        {
+          "name": "HiddenLayer1/kernel",
+          "shape": [19, 38],
+          "dtype": "float32"
+        },
+        { "name": "HiddenLayer1/bias", "shape": [38], "dtype": "float32" },
+        {
+          "name": "HiddenLayer2/kernel",
+          "shape": [38, 32],
+          "dtype": "float32"
+        },
+        { "name": "HiddenLayer2/bias", "shape": [32], "dtype": "float32" },
+        {
+          "name": "HiddenLayer3/kernel",
+          "shape": [32, 16],
+          "dtype": "float32"
+        },
+        { "name": "HiddenLayer3/bias", "shape": [16], "dtype": "float32" },
+        { "name": "InputLayer/kernel", "shape": [19, 19], "dtype": "float32" },
+        { "name": "InputLayer/bias", "shape": [19], "dtype": "float32" },
+        { "name": "OutputLayer/kernel", "shape": [16, 1], "dtype": "float32" },
+        { "name": "OutputLayer/bias", "shape": [1], "dtype": "float32" }
+      ]
+    }
+  ]
+}

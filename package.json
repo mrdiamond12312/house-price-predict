@@ -32,8 +32,9 @@
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "lint:prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts,less,md,json}\" --end-of-line auto",
     "commitlint": "commitlint --edit",
-    "model:train": "cd ai-model && poetry run python ./src/__init__.py && cd ..",
-    "model:install-deps": "cd ai-model && poetry install --no-root && cd .."
+    "model:train": "cd ai-model && py ./src/__init__.py && cd ..",
+    "model:install-deps": "cd ai-model && poetry install --no-root && cd ..",
+    "model:convert": "cd ai-model && tensorflowjs_converter --input_format=keras /model.h5 /model.json && cd .."
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
@@ -52,6 +53,8 @@
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/swagger": "^7.1.14",
     "@nestjs/typeorm": "^10.0.0",
+    "@tensorflow/tfjs": "^4.17.0",
+    "@tensorflow/tfjs-node": "3.18.0",
     "@types/bcrypt": "^5.0.1",
     "bcrypt": "^5.1.1",
     "class-transformer": "^0.5.1",

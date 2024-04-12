@@ -38,9 +38,8 @@ services:
       - api-network
     volumes:
       - ./db-data/postgresql:/var/lib/postgresql/data
-      - ./init-data.sh:/docker-entrypoint-initdb.d/init-data.sh
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready", "-d", "db_prod"]
+      test: [ "CMD-SHELL", "pg_isready", "-d", "db_prod" ]
       interval: 30s
       timeout: 60s
       retries: 5

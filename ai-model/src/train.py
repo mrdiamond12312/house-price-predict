@@ -1,6 +1,3 @@
-import seaborn as sns
-import matplotlib.pyplot as plt
-
 # Data Processing Frameworks
 import numpy as np
 import pandas as pd
@@ -10,6 +7,7 @@ from sklearn import preprocessing
 # Data Modeling Frameworks
 import tensorflow as tf
 from tensorflow import feature_column
+import tensorflowjs as tfjs
 
 from keras.models import Sequential
 from keras.layers import Dense, Dropout

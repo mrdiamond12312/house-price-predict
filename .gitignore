@@ -35,6 +35,9 @@ lerna-debug.log*
 .ai-model/*.keras
 .ai-model/src/__pycache__/*
 
+# database backup
+.db-data
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json

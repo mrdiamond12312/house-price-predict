@@ -1,6 +1,13 @@
-FROM node:18-alpine AS development
+FROM node:18-buster-slim AS development
 ENV NODE_ENV development
 
+RUN apt-get update && \
+    apt-get install -y build-essential \
+    wget \
+    python3 \
+    make \
+    gcc \
+    libc6-dev
 # Add a work directory
 WORKDIR /app
 

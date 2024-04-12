@@ -7,6 +7,9 @@ import {
   getDataSourceByName,
 } from 'typeorm-transactional';
 
+import { PriceController } from './modules/price/controllers/price.controller';
+import { PriceService } from './modules/price/services/price.service';
+
 import { AuthModule } from '@/modules/auth/auth.module';
 import { UserModule } from '@/modules/user/user.module';
 import { ApiConfigService } from '@/shared/services/api-config.service';
@@ -39,5 +42,7 @@ import { SharedModule } from '@/shared/shared.module';
     UserModule,
     AuthModule,
   ],
+  controllers: [PriceController],
+  providers: [PriceService],
 })
 export class AppModule {}
