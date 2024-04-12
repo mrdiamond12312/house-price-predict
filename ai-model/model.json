@@ -8,7 +8,7 @@
     "model_config": {
       "class_name": "Sequential",
       "config": {
-        "name": "sequential",
+        "name": "sequential_2",
         "layers": [
           {
             "class_name": "InputLayer",
@@ -55,7 +55,7 @@
               "name": "HiddenLayer1",
               "trainable": true,
               "dtype": "float32",
-              "units": 38,
+              "units": 19,
               "activation": "relu",
               "use_bias": true,
               "kernel_initializer": {
@@ -83,7 +83,7 @@
               "name": "HiddenLayer2",
               "trainable": true,
               "dtype": "float32",
-              "units": 32,
+              "units": 19,
               "activation": "relu",
               "use_bias": true,
               "kernel_initializer": {
@@ -111,7 +111,7 @@
               "name": "HiddenLayer3",
               "trainable": true,
               "dtype": "float32",
-              "units": 16,
+              "units": 19,
               "activation": "relu",
               "use_bias": true,
               "kernel_initializer": {
@@ -197,25 +197,25 @@
       "weights": [
         {
           "name": "HiddenLayer1/kernel",
-          "shape": [19, 38],
+          "shape": [19, 19],
           "dtype": "float32"
         },
-        { "name": "HiddenLayer1/bias", "shape": [38], "dtype": "float32" },
+        { "name": "HiddenLayer1/bias", "shape": [19], "dtype": "float32" },
         {
           "name": "HiddenLayer2/kernel",
-          "shape": [38, 32],
+          "shape": [19, 19],
           "dtype": "float32"
         },
-        { "name": "HiddenLayer2/bias", "shape": [32], "dtype": "float32" },
+        { "name": "HiddenLayer2/bias", "shape": [19], "dtype": "float32" },
         {
           "name": "HiddenLayer3/kernel",
-          "shape": [32, 16],
+          "shape": [19, 19],
           "dtype": "float32"
         },
-        { "name": "HiddenLayer3/bias", "shape": [16], "dtype": "float32" },
+        { "name": "HiddenLayer3/bias", "shape": [19], "dtype": "float32" },
         { "name": "InputLayer/kernel", "shape": [19, 19], "dtype": "float32" },
         { "name": "InputLayer/bias", "shape": [19], "dtype": "float32" },
-        { "name": "OutputLayer/kernel", "shape": [16, 1], "dtype": "float32" },
+        { "name": "OutputLayer/kernel", "shape": [19, 1], "dtype": "float32" },
         { "name": "OutputLayer/bias", "shape": [1], "dtype": "float32" }
       ]
     }

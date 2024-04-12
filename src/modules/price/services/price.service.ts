@@ -50,7 +50,7 @@ export class PriceService {
           : Number(inputs[tag]),
       ),
     );
-    return tf.tensor(vector, [1, 19]);
+    return tf.tensor([vector]);
   }
 
   async predict(inputs: PredictInputDto) {
